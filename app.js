@@ -11,7 +11,7 @@ app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
 //para procesar datos enviados desde forms
-app.use(express.urlencoded({extended:true}))
+app.use(express.urlencoded({extended:false}))
 app.use(express.json())
 
 //seteamos las variables de entorno
@@ -21,8 +21,7 @@ dotenv.config({path: './env/.env'})
 app.use(cookieParser())
 
 //llamar al router
-app.use('/', require('./routes/router'))
-
+app.use('/', require('./routes/router'));
 //Para eliminar la cache 
 app.use(function(req, res, next) {
     if (!req.user)
@@ -32,5 +31,5 @@ app.use(function(req, res, next) {
 
 
 app.listen(3000, ()=>{
-    console.log('SERVER UP runnung in http://localhost:3000')
+    console.log('Servidor iniciado en http://localhost:3000')
 })

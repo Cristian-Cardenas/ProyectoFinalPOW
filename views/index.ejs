@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.87.0">
-    <title>Login</title>
+    <title>Inicio</title>
     <!-- Bootstrap core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -33,14 +33,14 @@
   <body>
     
 <header class="navbar navbar-dark sticky-top bg-primary flex-md-nowrap p-0 shadow">
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company name</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="./">Requerimientos</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
  
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a type="button" class="px-3 btn btn-danger" href="logout">Logout</a>
+      <a type="button" class="px-3 btn btn-danger" href="logout">Cerrar sesión</a>
     </div>
   </div>
 </header>
@@ -49,41 +49,29 @@
   <div class="row">
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-primary sidebar collapse">
       <div class="position-sticky pt-3">
-        <ul class="nav flex-column">
+        <ul class="nav flex-column" >
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">
-              <span data-feather="home"></span>
-              Dashboard
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/proyectos">
               <span data-feather="file"></span>
-              Orders
+              Ver Proyectos
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/register">
+            <a class="nav-link" href="/create">
               <span data-feather="shopping-cart"></span>
-              REGISTRA USUARIO
+              Crear nuevo proyecto
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <span data-feather="users"></span>
-              Customers
+              
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/register">
               <span data-feather="bar-chart-2"></span>
-              Reports
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="layers"></span>
-              Integrations
+              Crear usuarios
             </a>
           </li>
         </ul>
@@ -93,7 +81,7 @@
     <!-- Contenido principal   -->
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h2>Dashboard</h2>
+        <h2>Inicio</h2>
         <h2>Bienvenido:
           <% if (user) { %>
             <span class="badge bg-success"><%= user.name %></span>

@@ -23,8 +23,7 @@ exports.register = async (req, res)=>{
 exports.login = async (req, res)=>{
     try {
         const user = req.body.user
-        const pass = req.body.pass        
-
+        const pass = req.body.pass
         if(!user || !pass ){
             res.render('login',{
                 alert:true,
